@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title>ul component</title>
+  <link rel="stylesheet" href="../build/build.css">
+  <style>
+    .box {
+      background: whiteSmoke;
+      width: 100px;
+      height: 100px;
+    }
+
+    .ul .toggle {
+      font-style: normal;
+      font-weight: bold;
+      color: #333;
+      font-size: 18px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>ul component</h1>
+  <script src="../build/build.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var UL = require('ul');
+    var ul = UL();
+
+    var box = document.createElement('div');
+    box.classList.add('box');
+
+    ul.li('Fruits')
+      .ul()
+        .li('Green')
+        .ul()
+          .li('Pear')
+          .li('Apple')
+          .ul()
+            .li('Granny Smith')
+            .li('Sour')
+            .close()
+            .end()
+          .li('Grapes')
+          .close()
+          .end()
+        .li('Yellow')
+        .ul()
+          .li('Banana')
+          .li('Apple')
+          .close()
+          .end()
+        .li('Purple')
+        .ul()
+          .li('Plum')
+          .li('Grapes')
+          .close()
+          .end()
+        .end()
+      .li('Vegetables')
+      .ul()
+
+
+    document.body.appendChild(ul.el);
+
+  </script>
+</body>
+</html>
