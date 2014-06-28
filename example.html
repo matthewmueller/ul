@@ -22,13 +22,13 @@
   <h1>ul component</h1>
   <script src="../build/build.js" type="text/javascript"></script>
   <script type="text/javascript">
-    var UL = require('ul');
-    var ul = UL();
+    var ul = require('ul');
 
     var box = document.createElement('div');
     box.classList.add('box');
 
-    ul.li('Fruits')
+    var list = ul()
+      .li('Fruits')
       .ul()
         .li('Green')
         .ul()
@@ -56,10 +56,9 @@
           .end()
         .end()
       .li('Vegetables')
-      .ul()
 
 
-    document.body.appendChild(ul.el);
+    document.body.appendChild(list.el);
 
   </script>
 </body>

@@ -9,9 +9,65 @@
 
     $ component install matthewmueller/ul
 
+## Example
+
+```js
+ul()
+  .li('Fruits')
+  .ul()
+    .li('Green')
+    .ul()
+      .li('Pear')
+      .li('Apple')
+      .ul()
+        .li('Granny Smith')
+        .li('Sour')
+        .close()
+        .end()
+      .li('Grapes')
+      .close()
+      .end()
+    .li('Yellow')
+    .ul()
+      .li('Banana')
+      .li('Apple')
+      .close()
+      .end()
+    .li('Purple')
+    .ul()
+      .li('Plum')
+      .li('Grapes')
+      .close()
+      .end()
+    .end()
+  .li('Vegetables')
+```
+
 ## API
 
+### ul()
 
+Create a list
+
+### ul#li(el)
+
+Create a list containing `el`
+
+### ul#ul()
+
+Create an inner list. The previous `<li>` will toggle the `<ul>`
+
+### ul#open()
+
+Open the list
+
+### ul#close()
+
+Close the list
+
+### ul#end()
+
+Return previous `ul` instance
 
 ## License
 
