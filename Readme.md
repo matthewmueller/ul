@@ -1,7 +1,7 @@
 
 # ul
 
-  &lt;ul&gt; component
+  collapsible list component
 
 ## Installation
 
